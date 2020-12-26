@@ -1,0 +1,106 @@
+/*!
+
+=> Junaid Raza
+
+*/
+
+$asset-base-path: "../../../../assets" !default;
+
+// Core
+
+@import "jaystore-react/custom/functions";
+@import "~bootstrap/scss/functions";
+
+@import "jaystore-react/custom/variables";
+@import "~bootstrap/scss/variables";
+
+@import "jaystore-react/custom/mixins";
+@import "~bootstrap/scss/mixins";
+
+// Bootstrap components
+
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/jumbotron";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/print";
+
+// Custom components
+
+@import "jaystore-react/custom/alerts.scss";
+@import "jaystore-react/custom/buttons.scss";
+@import "jaystore-react/custom/dropdown.scss";
+@import "jaystore-react/custom/footer.scss";
+@import "jaystore-react/custom/forms.scss";
+@import "jaystore-react/custom/images.scss";
+@import "jaystore-react/custom/modal.scss";
+@import "jaystore-react/custom/navbar.scss";
+@import "jaystore-react/custom/type.scss";
+@import "jaystore-react/custom/icons.scss";
+@import "jaystore-react/custom/tables";
+@import "jaystore-react/custom/checkboxes-radio";
+@import "jaystore-react/custom/fixed-plugin";
+@import "jaystore-react/custom/pagination.scss";
+@import "jaystore-react/custom/misc.scss";
+@import "jaystore-react/custom/rtl.scss";
+@import "jaystore-react/custom/input-group.scss";
+@import "jaystore-react/custom/example-pages.scss";
+@import "jaystore-react/custom/progress.scss";
+@import "jaystore-react/custom/badge.scss";
+@import "jaystore-react/custom/pills.scss";
+@import "jaystore-react/custom/tabs.scss";
+@import "jaystore-react/custom/info-areas.scss";
+
+// Sections
+@import "jaystore-react/custom/sections.scss";
+
+// Vendor / Plugins
+
+@import "jaystore-react/custom/vendor/plugin-perfect-scrollbar.scss";
+@import "jaystore-react/custom/vendor/plugin-animate-bootstrap-notify.scss";
+@import "jaystore-react/custom/vendor/plugin-bootstrap-switch.scss";
+@import "jaystore-react/custom/vendor/plugin-nouislider.scss";
+@import "jaystore-react/custom/vendor/plugin-datetimepicker.scss";
+
+// Cards
+
+@import "jaystore-react/custom/card";
+@import "jaystore-react/custom/cards/card-chart";
+@import "jaystore-react/custom/cards/card-map";
+@import "jaystore-react/custom/cards/card-user";
+@import "jaystore-react/custom/cards/card-task";
+@import "jaystore-react/custom/cards/card-plain";
+@import "jaystore-react/custom/cards/card-register";
+@import "jaystore-react/custom/cards/card-stats";
+@import "jaystore-react/custom/cards/card-chart";
+
+// React Differences
+
+@import "jaystore-react/react/react-differences";

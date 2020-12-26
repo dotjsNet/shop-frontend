@@ -1,0 +1,20 @@
+.form-group .form-control,
+.input-group .form-control {
+  border-color: #eee !important;
+}
+.input-group-append .input-group-text,
+.input-group-prepend .input-group-text {
+  border-color: #eee !important;
+}
+.form-control::placeholder {
+  color: #eee;
+}
+.form-control::-webkit-input-placeholder {
+  /* Edge */
+  color: #eee;
+}
+
+.form-control:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #eee;
+}
