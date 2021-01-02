@@ -27,9 +27,11 @@ import {
   InputGroupText,
   InputGroup,
 } from "reactstrap";
+import { useStateValue } from "states/StateProvider";
 import "./CSS/header.css";
 
 export default function IndexNavbar() {
+  const [{ cart }, dispatch] = useStateValue();
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   const [collapseOut, setCollapseOut] = React.useState("");
   const [color, setColor] = React.useState("navbar-transparent");
@@ -169,8 +171,8 @@ export default function IndexNavbar() {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink>
-                <i className="fas fa-cart-plus" /> 0
+              <NavLink to="/checkout" tag={Link}>
+                <i className="fas fa-cart-plus" /> {cart?.length}
               </NavLink>
             </NavItem>
           </Nav>
