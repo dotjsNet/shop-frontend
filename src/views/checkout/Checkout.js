@@ -12,11 +12,14 @@ import {
   CardSubtitle,
   Image,
 } from "reactstrap";
+import { useStateValue } from "states/StateProvider.js";
 import IndexNavbar from "../../components/Navbars/IndexNavbar.js";
 import "./Checkout.css";
+import CheckoutItems from "./CheckoutItems.js";
 import Subtotal from "./Subtotal.js";
 
 function Checkout() {
+  const [{ cart }] = useStateValue();
   return (
     <div>
       <IndexNavbar />
@@ -24,27 +27,16 @@ function Checkout() {
         <Container className="mt-5">
           <Row>
             <Col xs={12} md={8}>
-              <div className="d-flex">
-                <Row>
-                  <Col className="mt-3" xs={12} md={6}>
-                    <CardImg
-                      top
-                      width="100%"
-                      src="https://picsum.photos/500/300"
-                      className="checkout-img mr-3"
-                    />
-                  </Col>
-                  <Col className="mt-3" xs={12} md={6}>
-                    <div className="">
-                      <h1>hi there</h1>
-                      <p>$99.99</p>
-                      <p>
-                        <span className="fa fa-star"></span>
-                      </p>
-                      <Button color="primary">Remove from cart</Button>
-                    </div>
-                  </Col>
-                </Row>
+              <div className="mt-5">
+                {cart.map((item) => (
+                  <CheckoutItems
+                    id={item.id}
+                    title={item.title}
+                    image={item.image}
+                    price={item.price}
+                    rating={item.rating}
+                  />
+                ))}
               </div>
             </Col>
 
