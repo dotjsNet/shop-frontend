@@ -14,6 +14,8 @@ import RegisterPage from "views/examples/RegisterPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import Checkout from "views/checkout/Checkout.js";
 import * as serviceWorker from "./serviceWorker.js";
+import Login from "views/auth/Login.js";
+import Register from "views/auth/Register.js";
 
 ReactDOM.render(
   <StateProvider initialState={initialState} reducer={reducer}>
@@ -33,6 +35,8 @@ ReactDOM.render(
           render={(props) => <ProfilePage {...props} />}
         />
         <Route path="/checkout" render={(props) => <Checkout {...props} />} />
+        <Route path="/login" render={(props) => <Login {...props} />} />
+        <Route path="/register" render={(props) => <Register {...props} />} />
         <Redirect from="/" to="/components" />
       </Switch>
     </BrowserRouter>

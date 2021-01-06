@@ -36,9 +36,31 @@ import NucleoIcons from "views/IndexSections/NucleoIcons.js";
 import Signup from "views/IndexSections/Signup.js";
 import Examples from "views/IndexSections/Examples.js";
 import Download from "views/IndexSections/Download.js";
+import { auth } from "db/Firebase";
+import { useStateValue } from "states/StateProvider";
+
+// 4:20
 
 export default function Core() {
+  const [{}, dispatch] = useStateValue();
   React.useEffect(() => {
+    auth.onAuthStateChanged((authUser) => {
+      console.log("The user is >>>", authUser);
+
+      if (authUser) {
+        // User was logged
+        dispatch({
+          type: "SET_USER",
+          user: authUser,
+        });
+      } else {
+        // User logged out
+        dispatch({
+          type: "SET_USER",
+          user: null,
+        });
+      }
+    });
     document.body.classList.toggle("index-page");
     // Specify how to clean up after this effect:
     return function cleanup() {
